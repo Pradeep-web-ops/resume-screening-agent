@@ -87,7 +87,7 @@ All results are stored locally using **TinyDB** and can be viewed through the da
 
 
 
-Architecture Diagram :
+Architecture Diagram : C:\resume-screening-agent\architecture.png
                 ┌──────────────────────────┐
                 │        User (You)        │
                 └──────────────┬───────────┘
@@ -124,6 +124,7 @@ Architecture Diagram :
               └──────────────────────────────────┘
 
     
+
 
 
 
