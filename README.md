@@ -86,5 +86,45 @@ All results are stored locally using **TinyDB** and can be viewed through the da
       AI & Python Developer 
 
 
+
+Architecture Diagram :
+                ┌──────────────────────────┐
+                │        User (You)        │
+                └──────────────┬───────────┘
+                               │
+                               ▼
+                    ┌────────────────────┐
+                    │    Streamlit UI    │
+                    │ (Multi-Page App)   │
+                    └───────┬────────────┘
+                            │
+          ┌─────────────────┼────────────────┐
+          │                 │                │
+          ▼                 ▼                ▼
+┌──────────────────┐  ┌───────────────┐  ┌──────────────────┐
+│ Upload JD (PDF)  │  │ Upload Resume │  │  View Dashboard   │
+└─────────┬────────┘  └────────┬──────┘  └──────────┬───────┘
+          │                     │                    │
+          ▼                     ▼                    ▼
+┌──────────────────┐   ┌──────────────────┐  ┌────────────────────┐
+│ Extractor.py     │   │ Extractor.py     │  │ Results from DB     │
+│ (PDF → Text)     │   │ (PDF → Text)     │  │ TinyDB (db.json)    │
+└─────────┬────────┘   └────────┬────────┘  └──────────┬──────────┘
+          │                     │                    │
+          ▼                     ▼                    ▼
+┌──────────────────┐   ┌──────────────────┐  ┌────────────────────┐
+│ Vector Store     │   │ scorer.py        │  │  Streamlit Charts   │
+│ (ChromaDB local) │   │ AI-based scoring │  │ Bar/line/table view │
+└─────────┬────────┘   └────────┬────────┘  └──────────┬──────────┘
+          │                     │                    │
+          ▼                     ▼                    ▼
+              ┌──────────────────────────────────┐
+              │      TinyDB (data/db.json)       │
+              │ Stores: Score, Skills, Decision  │
+              └──────────────────────────────────┘
+
     
+
+
+
 
