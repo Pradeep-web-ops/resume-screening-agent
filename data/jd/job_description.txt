@@ -1,0 +1,9 @@
+Job Title: Python Data Scientist
+
+We are looking for a Python Data Scientist with the following skills:
+- Strong knowledge of Python, Pandas, NumPy
+- Experience with Machine Learning algorithms (Regression, Classification)
+- Familiarity with Deep Learning frameworks like TensorFlow or PyTorch
+- Data Visualization skills using Matplotlib or Seaborn
+- Good communication skills and problem-solving ability
+- Experience with version control (Git) and cloud platforms (AWS/GCP) is a plus
